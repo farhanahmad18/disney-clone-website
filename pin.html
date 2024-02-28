@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pin.css">
+    <title>Pinocchio</title>
+
+</head>
+<body>
+    <header>
+        <div class="toggle"><a href="pin.html"></a></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2><span>Pinocchio</span></h2>
+            <p>A live action retelling of the beloved tale of a wooden puppet who embarks on a thrilling adventure to become a real boy.</p>
+           <button class="button1"><a href="#" class="play" onclick="toggle()">Watch Now</a></button> <button class="button2"><a href="download.html" class="play" onclick="toggle()">Download</a></button>
+        </div>
+    </div>
+    <div class="movie">
+        <video src="videos/bb.mp4.mkv" controls="true"></video>
+    </div>
+    
+    <script>
+        function toggle() {
+            var movie = document.querySelector('.movie');
+            let video = document.querySelector('.video');
+            movie.classList.toggle('active');
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
